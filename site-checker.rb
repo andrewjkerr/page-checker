@@ -76,6 +76,7 @@ MESSAGE_END
 	        smtp.finish
 	        file = File.open("old_source", "w+")
 	        file.write(source.inner_html)
+	        file.close
 	end
 	sleep 7200
 end
