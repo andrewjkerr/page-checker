@@ -66,7 +66,7 @@ Content-type: text/html
 
 #{source.inner_html}
 MESSAGE_END
-			email_addresses.each do |email|
+	        email_addresses.each do |email|
 	        	smtp.send_message(message, from_email, email)
 	        	puts "Email sent to #{email}"
 	        end
