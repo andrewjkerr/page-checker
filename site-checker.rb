@@ -22,10 +22,7 @@ while true
 
 	# Read in emails addresses
 	emails_file = File.open("emails.txt", "a+")
-	email_addresses = Array.new
-	emails_file.each_line do |line|
-		email_addresses.push line
-	end
+	email_addresses = emails_file.read.split("\n")
 
 	# Check email for new subscriptions
 	Mail.defaults do
